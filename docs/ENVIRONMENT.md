@@ -23,7 +23,7 @@ Full hashes from `git rev-parse HEAD` on 2026-10-25.
 | Official repo | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill |
 | Owner | `nextlevelbuilder` |
 | License | MIT |
-| Stars | 140040, from `gh api repos/nextlevelbuilder/ui-ux-pro-max-skill` on 2026-10-25 |
+| Stars | 140045 on the read at 2026-10-25 from `gh api repos/nextlevelbuilder/ui-ux-pro-max-skill`. The count moves. The provenance is the URL, owner, license, and commit, not the exact star number. |
 | Commit installed | `d14efff8ed1faa4187f004f79926f428c8074ec7` (2026-10-23) |
 | Installed path | `~/.claude/skills/ui-ux-pro-max` and `~/.cursor/skills/ui-ux-pro-max` |
 | Check | `diff -rq` against `~/src/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max` was empty after the copy |

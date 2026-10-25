@@ -10,3 +10,6 @@ Round 1 audit: `docs/audits/phase-0-round-1.md`.
 | P0-R1-F04 | Added trademark status, Cal.com link, DataForSEO key, and Frappe Cloud API credentials to `docs/TODO_FROM_OWNER.md`. | Those four items are in the still-missing section. |
 | P0-R1-F05 | Cited `setup_wizard.py` lines 13–48 and 53–70, the slide lines in `public/js/setup_wizard.js`, and the India Compliance field lines. | Line numbers taken from those files on 2026-10-25. |
 | P0-R1-F06 | Added a root `README.md` that says how to run `web/` and that the planned `apps/` and `packages/` layout is not built. | `README.md` is at the repo root. |
+| P0-R2-F01 | Corrected the Payments rows. Razorpay, Paytm, PayPal, Braintree, GoCardless, and M-Pesa controllers are in `payment_gateways/doctype/`. UPI is still not claimed: those files have no UPI method. | `ls` of that doctype directory and `RazorpaySettings` in `razorpay_settings.py`. |
+| P0-R2-F02 | Star count in `ENVIRONMENT.md` is marked as a point-in-time read. Last read this day was 140045. | `gh api repos/nextlevelbuilder/ui-ux-pro-max-skill`. |
+| P0-R2-F03 | README names Opralvin One as the product and Opralvin Technologies as the company. | `README.md` first paragraph. |

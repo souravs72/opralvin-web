@@ -7,7 +7,7 @@ Paid API spend stays at zero until a budget number is supplied. Every paid call,
 
 | Phase | Status | Round | Last audit | Updated |
 |---|---|---|---|---|
-| 0 Environment and capability inventory | AUDITING | 2 | docs/audits/phase-0-round-1.md | 2026-10-25 |
+| 0 Environment and capability inventory | AUDITING | 3 | docs/audits/phase-0-round-2.md | 2026-10-25 |
 | 1 Strategy, positioning and offer | NOT_STARTED | 0 | | |
 | 2 Brand and design system | NOT_STARTED | 0 | | |
 | 3 Architecture | NOT_STARTED | 0 | | |

@@ -43,7 +43,7 @@ Customer-facing pages do not name the underlying stack. This file does, because 
 | e-Invoice and e-way bill are generated from the sales order. | e-Invoice is generated from **Sales Invoice** (`generate_e_invoice` loads that DocType). e-Way bill actions are attached to Delivery Note, Sales Invoice, Purchase Invoice, Purchase Receipt, Stock Entry, Subcontracting Order, and Subcontracting Receipt. |
 | We file GSTR-3B from the product. | `GSTR3bAPI.file_gstr_3b` exists. A name search found no caller outside that class. The screen that is wired prepares the return and downloads JSON/Excel. |
 | The owner gets stock and receivables on a dedicated phone app. | HR has a phone web app. CRM has a mobile lead page. No owner app for stock and receivables was found. |
-| We collect UPI in the product. | This Payments app contains Stripe and Paymob only. |
+| We collect UPI in the product. | Razorpay and Paytm controllers are in the Payments app. This pass found no UPI method in those files. Do not say UPI is collected until that is shown. |
 | Any client name, logo, metric, or screenshot from this bench. | See `docs/TODO_FROM_OWNER.md`. |
 | The godown manager scans the inward bill and stock updates. | Not verified as a finished workflow in this pass. |
 
@@ -167,7 +167,7 @@ All rows in this section are Demo-able N until the version mismatch above is res
 | Export records | Data Export. `apps/frappe/frappe/core/doctype/data_export/data_export.json` | Y | Y | |
 | Import a chart of accounts from a spreadsheet before any transactions exist | Chart of Accounts Importer. `apps/erpnext/erpnext/accounts/doctype/chart_of_accounts_importer/chart_of_accounts_importer.py` | Y | Y | Rejects a file that is not the 8-column template. Refuses a company that already has ledger entries. Not a Tally backup. |
 | Create opening sales and purchase invoices | Opening Invoice Creation Tool. `apps/erpnext/erpnext/accounts/doctype/opening_invoice_creation_tool/opening_invoice_creation_tool.py` (`invoice_type` Sales or Purchase) | Y | Y | Can create a missing party. This is the open-bills tool. |
-| Take a card payment through the Payments app | `apps/payments/payments/payment_gateways/stripe_integration.py` and `paymob/` | Y | N | Stripe and Paymob only. No Razorpay directory in this app. |
+| Take a card or online payment through the Payments app | Gateway controllers under `apps/payments/payments/payment_gateways/doctype/`: Stripe, Paymob, Razorpay, Paytm, PayPal, Braintree, GoCardless, M-Pesa. Razorpay controller: `razorpay_settings/razorpay_settings.py` (`RazorpaySettings`, default currency INR at lines 29 and 135, `get_payment_url` at line 327) | Y | N | Each gateway needs its own credentials. This pass found no method named for UPI in the Razorpay or Paytm controllers. |
 | Run an internal chat for the team | Raven modules in `apps/raven/raven/modules.txt` | Y | N | Useful later for a new-lead alert. Not a customer-facing claim. |
 | Track a support ticket | HD Ticket. `apps/helpdesk/helpdesk/helpdesk/doctype/hd_ticket/hd_ticket.json` | Y | Y | Installed. Not in the flagship sentence until you add it. |
 | Host courses | LMS module. `apps/lms/lms/modules.txt` | Y | N | Not in the flagship sentence. |

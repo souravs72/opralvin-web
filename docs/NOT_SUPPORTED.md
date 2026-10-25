@@ -8,7 +8,7 @@ Marketing must not promise these. Each line is something we looked for and did n
 | e-Invoice or e-way bill generated from a sales order | e-Invoice is generated from Sales Invoice. e-Way bill is attached to delivery, invoice, and stock documents. |
 | Filing GSTR-3B on the GST portal from the product | The screen prepares the return and downloads JSON or Excel. The portal file, save, and submit methods have no caller outside their own class. |
 | An owner phone app for stock, sales, and receivables | Not found. The phone surfaces that exist are the HR web app and a CRM lead page. |
-| UPI or Razorpay collection in the Payments app | This checkout has Stripe and Paymob. |
+| A verified UPI flow | Razorpay and Paytm controllers exist and need credentials. No UPI method was found in those files, so UPI itself is not a claim. |
 | UTM, consent time, assessment score, or calculator result already stored on a CRM Lead | Those fields are not on the DocType. |
 | Automatic cloud backups as a product feature | Not in the code reviewed for the inventory. |
 | PF or ESI deducted on the salary slip | EPF, ESIC, and LWF report files exist. The deduction path was not traced. |

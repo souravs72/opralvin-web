@@ -1,6 +1,6 @@
 # Opralvin
 
-Marketing site for Opralvin Technologies. Phase 0 is the capability inventory. Later phases add the public site.
+Marketing site for Opralvin One, the product of Opralvin Technologies. Phase 0 is the capability inventory. Later phases add the public site.
 
 ## What is here
 
