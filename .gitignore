@@ -1,8 +1,10 @@
 # Dependencies
 node_modules/
 
-# Vite and Storybook build output
+# Vite, Next, and Storybook build output
 storybook-static/
+.next/
+out/
 dist/
 dist-ssr/
 dist-single/
@@ -28,6 +30,8 @@ pnpm-debug.log*
 
 # Test / coverage
 coverage/
+__pycache__/
+*.pyc
 
 # OS and editors
 .DS_Store

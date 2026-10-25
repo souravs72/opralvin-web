@@ -1,0 +1,11 @@
+{
+  "name": "opralvin",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter @opralvin/web build",
+    "test": "python3 -m unittest discover -s apps/frappe-site/opralvin_site/tests -v",
+    "secrets": "node scripts/scan-secrets.mjs",
+    "bundle:check": "node scripts/check-client-bundle.mjs"
+  },
+  "packageManager": "pnpm@11.18.0"
+}

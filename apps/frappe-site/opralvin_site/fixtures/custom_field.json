@@ -1,0 +1,83 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_utm_source",
+    "label": "UTM Source",
+    "fieldtype": "Data",
+    "insert_after": "source",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_utm_medium",
+    "label": "UTM Medium",
+    "fieldtype": "Data",
+    "insert_after": "custom_utm_source",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_utm_campaign",
+    "label": "UTM Campaign",
+    "fieldtype": "Data",
+    "insert_after": "custom_utm_medium",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_landing_page",
+    "label": "Landing Page",
+    "fieldtype": "Data",
+    "insert_after": "custom_utm_campaign",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_segment",
+    "label": "Segment",
+    "fieldtype": "Data",
+    "insert_after": "custom_landing_page",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_assessment_score",
+    "label": "Assessment Score",
+    "fieldtype": "Int",
+    "insert_after": "custom_segment",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_calculator_result",
+    "label": "Calculator Result",
+    "fieldtype": "JSON",
+    "insert_after": "custom_assessment_score",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_consent",
+    "label": "Consent",
+    "fieldtype": "Check",
+    "insert_after": "custom_calculator_result",
+    "module": "Opralvin Site"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "CRM Lead",
+    "fieldname": "custom_consent_purpose",
+    "label": "Consent Purpose",
+    "fieldtype": "Small Text",
+    "insert_after": "custom_consent",
+    "module": "Opralvin Site"
+  }
+]

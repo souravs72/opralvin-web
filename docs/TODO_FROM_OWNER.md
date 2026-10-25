@@ -71,6 +71,8 @@ Site directories present, also off limits for screenshots and examples:
 
 A demo has to be a new company with fictional data, on a site you name. Nightly reset and a read-only guest are not set up.
 
+`opralvin_site` is in `apps/frappe-site`. It is not installed on any bench site. Do not install it on a client site. Name a new site, and supply `FRAPPE_URL`, `FRAPPE_API_KEY`, and `FRAPPE_API_SECRET`, before a live install.
+
 ## Prototype copy that goes past the inventory
 
 `web/src/data.js` is an earlier Vite page. It was not edited. These lines should not ship:
