@@ -1,0 +1,30 @@
+{
+  "status": 200,
+  "json": {
+    "name": "CRM-LEAD-0021",
+    "ack": {
+      "mail": {
+        "id": "sandbox-mail-1792951415010",
+        "sandbox": true
+      },
+      "whatsapp": {
+        "id": "sandbox-wa-1792951415010",
+        "sandbox": true
+      }
+    }
+  },
+  "posted": {
+    "name": "Asha",
+    "phone": "+919876543210",
+    "email": "asha@example.com",
+    "company": "Sample Traders",
+    "consent": true,
+    "company_website": "",
+    "landing_page": "/process-audit",
+    "utm_source": "google",
+    "utm_medium": "cpc",
+    "utm_campaign": "audit",
+    "assessment_score": 3
+  },
+  "statusText": "Stored. We will use this only to call you about a process audit."
+}

@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const root = new URL("../apps/web/.next/static", import.meta.url).pathname;
-const needles = ["FRAPPE_API_SECRET", "FRAPPE_API_KEY", "token "];
+const needles = ["FRAPPE_API_SECRET", "FRAPPE_API_KEY", "FRAPPE_URL", "token "];
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {

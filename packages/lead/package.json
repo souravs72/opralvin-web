@@ -1,0 +1,9 @@
+{
+  "name": "@opralvin/lead",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./pipeline.ts",
+    "./pipeline": "./pipeline.ts"
+  }
+}

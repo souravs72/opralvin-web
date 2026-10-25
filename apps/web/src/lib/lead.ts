@@ -15,6 +15,7 @@ export const leadInput = z
     segment: z.string().optional(),
     assessment_score: z.number().optional(),
     calculator_result: z.unknown().optional(),
+    turnstile_token: z.string().optional(),
   })
   .refine((value) => !value.company_website, { message: "Rejected.", path: ["company_website"] });
 

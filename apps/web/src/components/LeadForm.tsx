@@ -29,6 +29,7 @@ export function LeadForm() {
         const n = Number(raw);
         return Number.isFinite(n) ? n : undefined;
       })(),
+      turnstile_token: String(data.get("cf-turnstile-response") ?? "") || undefined,
     };
     const response = await fetch("/api/leads", {
       method: "POST",
@@ -79,6 +80,9 @@ export function LeadForm() {
         Company website
         <input name="company_website" tabIndex={-1} autoComplete="off" />
       </label>
+      {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY.includes("{{") ? (
+        <div className="cf-turnstile" data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} />
+      ) : null}
       <label className="flex gap-3 text-sm">
         <input name="consent" type="checkbox" value="yes" required className="mt-1" />
         <span>

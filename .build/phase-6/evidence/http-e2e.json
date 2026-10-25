@@ -1,0 +1,16 @@
+{
+  "status": 200,
+  "json": {
+    "name": "CRM-LEAD-0015",
+    "ack": {
+      "mail": {
+        "id": "sandbox-mail-1792951409719",
+        "sandbox": true
+      },
+      "whatsapp": {
+        "id": "sandbox-wa-1792951409719",
+        "sandbox": true
+      }
+    }
+  }
+}

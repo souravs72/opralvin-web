@@ -1,6 +1,7 @@
 import { SiteFooter, SiteHeader, WhatsAppSticky } from "@/components/Site";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const display = Source_Serif_4({
@@ -36,6 +37,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <SiteFooter />
         <WhatsAppSticky />
+        {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY.includes("{{") ? (
+          <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" />
+        ) : null}
       </body>
     </html>
   );

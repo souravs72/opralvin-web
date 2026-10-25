@@ -1,13 +1,13 @@
 {
-  "current_phase": 5,
+  "current_phase": 6,
   "phases": {
     "0": { "status": "PASSED", "audit_rounds": 2, "sealed_commit": "2ac95ad", "open_issues": [] },
     "1": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "e7a0316", "open_issues": [] },
     "2": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "189e90d", "open_issues": [] },
     "3": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 3, "sealed_commit": "ea4c61a", "open_issues": [] },
     "4": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 2, "sealed_commit": "a3cdb74", "open_issues": [] },
-    "5": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "PENDING", "open_issues": [] },
-    "6": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "5": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "9996f86", "open_issues": [] },
+    "6": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "PENDING", "open_issues": [] },
     "7": { "status": "NOT_STARTED", "audit_rounds": 0 },
     "8": { "status": "NOT_STARTED", "audit_rounds": 0 },
     "9": { "status": "NOT_STARTED", "audit_rounds": 0 },
@@ -24,7 +24,8 @@
     "Provide domain, public email, WhatsApp number, city, booking link",
     "Supply 3 to 5 motion reference frames. MOTION.md marks anything outside the written brief as ASK ME",
     "Provide a DataForSEO API key if live keyword volumes are required",
-    "Name a non-client site and provide Frappe Cloud credentials before installing opralvin_site"
+    "Name a non-client site and provide Frappe Cloud credentials before installing opralvin_site",
+    "Provide Turnstile, Upstash, Resend, and WhatsApp keys before live acknowledgements. Until then sandbox adapters log only"
   ],
   "blocked": null
 }

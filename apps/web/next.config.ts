@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@opralvin/content"],
+  transpilePackages: ["@opralvin/content", "@opralvin/lead"],
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

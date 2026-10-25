@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "pnpm --filter @opralvin/web build",
-    "test": "python3 -m unittest discover -s apps/frappe-site/opralvin_site/tests -v && node --test packages/content/*.test.ts",
+    "test": "python3 -m unittest discover -s apps/frappe-site/opralvin_site/tests -v && node --test packages/content/*.test.ts packages/lead/*.test.ts",
     "vitals": "node scripts/phase-5-vitals.mjs",
     "chunk:3d": "node scripts/check-3d.mjs",
     "secrets": "node scripts/scan-secrets.mjs",
