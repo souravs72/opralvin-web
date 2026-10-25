@@ -5,5 +5,6 @@ No paid API call has been made.
 | Date | Service | What | INR |
 |---|---|---|---|
 | 2026-10-25 | none | Phase 0 used local code and unauthenticated GitHub API reads of a public repo. | 0 |
+| 2026-10-25 | none | Phase 1 read public government and vendor pages. No paid lookup. | 0 |
 
 Budget cap per phase: `{{API_BUDGET_INR}}`. That number is not set. Do not start a paid call until it is.

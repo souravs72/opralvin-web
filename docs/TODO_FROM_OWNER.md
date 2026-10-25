@@ -16,6 +16,8 @@ Phase 0 stopped here. Nothing in this file is approved for a public page. I did 
 
 Prices, support hours, SLAs, office address, founder photo, and any client quote or logo. The brief’s lists for testimonials, logos, case studies, and metrics are empty. They stay empty.
 
+Price tokens used in the strategy pack, with no rupee amount behind them yet: `{{STARTER_PRICE}}`, `{{GROWTH_PRICE}}`, `{{MANAGED_PRICE}}`, `{{DAY_RATE}}`, `{{CA_FEE}}`. Also still unset, and already named above: `{{WHATSAPP_NUMBER}}`, `{{BOOKING_LINK}}`, `{{PUBLIC_EMAIL}}`, `{{CITY}}`.
+
 Also unknown, and not to be invented:
 
 - Trademark status of the name and the domain. The brief marks the domain TBD. Nothing here has been checked against a trademark register.

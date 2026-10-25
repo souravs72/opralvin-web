@@ -1,0 +1,11 @@
+cluster,relative_demand,url_path,reason,volume_note
+process audit for books stock and GST paperwork,higher,/process-audit,"This is the primary call to action. Relative demand means we would rather be found for this than for a city name. It is not a search volume.",no volume; paid lookup not used
+outgrown a desktop accounts package,higher,/who-its-for/trading,"Matches the recommended calling order: a trading firm with more than one godown.",no volume; paid lookup not used
+stock in more than one godown,higher,/who-its-for/trading,"Same page. One path per cluster. The godown question and the desktop-package question are separate clusters that share one path.",no volume; paid lookup not used
+light manufacturing job card and bill of materials,lower,/who-its-for/manufacturing,"Second call, not the beachhead. The page is proposed because the score is close and the shop-floor tools are demoable.",no volume; paid lookup not used
+what the implementation will not do,higher,/not-a-fit,"The missing Tally reader, the missing GST demo, and the other refusals need one honest page.",no volume; paid lookup not used
+starter onboarding scope,lower,/offers/starter,"One offer, one path.",no volume; paid lookup not used
+growth implementation scope,higher,/offers/growth,"The middle paid offer. Relative demand is higher because it is the offer we expect to explain most often. That expectation is an assumption, not a volume.",no volume; paid lookup not used
+managed service scope,lower,/offers/managed,"The ongoing offer. One path.",no volume; paid lookup not used
+questions before changing the system,higher,/questions,"Objections need a page so the brief is not the only place they live.",no volume; paid lookup not used
+chartered accountant referral,lower,/partners/ca,"The CA path is compared in the 90-day plan and is not the primary call to action.",no volume; paid lookup not used
