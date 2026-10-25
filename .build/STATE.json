@@ -1,12 +1,12 @@
 {
-  "current_phase": 4,
+  "current_phase": 5,
   "phases": {
     "0": { "status": "PASSED", "audit_rounds": 2, "sealed_commit": "2ac95ad", "open_issues": [] },
     "1": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "e7a0316", "open_issues": [] },
     "2": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "189e90d", "open_issues": [] },
     "3": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 3, "sealed_commit": "ea4c61a", "open_issues": [] },
-    "4": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 2, "sealed_commit": "PENDING", "open_issues": [] },
-    "5": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "4": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 2, "sealed_commit": "a3cdb74", "open_issues": [] },
+    "5": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": "PENDING", "open_issues": [] },
     "6": { "status": "NOT_STARTED", "audit_rounds": 0 },
     "7": { "status": "NOT_STARTED", "audit_rounds": 0 },
     "8": { "status": "NOT_STARTED", "audit_rounds": 0 },

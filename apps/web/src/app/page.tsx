@@ -1,4 +1,5 @@
-import { Claim, Page, Stamp } from "@/components/Site";
+import { HeroChallan, MoveTour } from "@/components/HeroChallan";
+import { Claim, Page } from "@/components/Site";
 import { softwareLd } from "@/lib/jsonld";
 import { metaFor } from "@/lib/seo";
 import Link from "next/link";
@@ -30,55 +31,24 @@ export default function Home() {
             </Link>
           </p>
         </div>
-        <article className="sheet-settle border border-line bg-sheet p-4">
-          <p className="font-[family-name:var(--font-mono)] text-xs tracking-wide text-muted">
-            Illustrative challan. Not a live document.
-          </p>
-          <dl className="mt-4 space-y-3 text-base">
-            <div className="flex justify-between border-b border-line pb-2">
-              <dt>Party</dt>
-              <dd className="font-[family-name:var(--font-mono)]">Sample Traders</dd>
-            </div>
-            <div className="flex justify-between border-b border-line pb-2">
-              <dt>Godown</dt>
-              <dd className="font-[family-name:var(--font-mono)]">Ludhiana main</dd>
-            </div>
-            <div className="flex justify-between border-b border-line pb-2">
-              <dt>Item</dt>
-              <dd className="font-[family-name:var(--font-mono)]">HSN 7214</dd>
-            </div>
-            <div className="flex justify-between border-b border-line pb-2">
-              <dt>Qty inward</dt>
-              <dd className="font-[family-name:var(--font-mono)]">240 bags</dd>
-            </div>
-          </dl>
-          <div className="mt-4">
-            <Stamp>Posted to stock</Stamp>
-          </div>
-        </article>
+        <HeroChallan />
       </div>
       <hr className="border-rule" />
-      <h2 className="text-2xl">What we move</h2>
-      <ul className="max-w-prose space-y-3">
-        <li data-claim="L26">The spreadsheet of parties and items. L26</li>
-        <li data-claim="L29">Opening sales and purchase invoices. L29</li>
-        <li data-claim="L16">Opening stock from a count. Not a desktop-company file. L16</li>
-        <li data-claim="L28">A chart of accounts from the eight-column template, before any ledger entries exist. L28</li>
-      </ul>
+      <MoveTour />
       <p className="max-w-prose" data-claim="L46">
         The first calls are a trading firm with more than one godown. That is a calling order, not a count of demand.
       </p>
       <p>
-        <Link href="/product" className="underline">
-          Product
+        <Link href="/calculator" className="underline">
+          Calculator
+        </Link>
+        {" · "}
+        <Link href="/assessment" className="underline">
+          Assessment
         </Link>
         {" · "}
         <Link href="/migration" className="underline">
           Migration
-        </Link>
-        {" · "}
-        <Link href="/pricing" className="underline">
-          Pricing
         </Link>
       </p>
     </Page>

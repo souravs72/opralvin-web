@@ -6,6 +6,8 @@
     ".": "./site.ts",
     "./site": "./site.ts",
     "./bodies": "./bodies.ts",
-    "./events": "./events.ts"
+    "./events": "./events.ts",
+    "./calculator": "./calculator.ts",
+    "./assessment": "./assessment.ts"
   }
 }

@@ -61,6 +61,11 @@ export default function PricingPage() {
         ))}
       </dl>
       <p>
+        <Link href="/calculator" className="underline">
+          Day-rate calculator
+        </Link>
+      </p>
+      <p>
         <Link href="/process-audit" className="bg-ink px-4 py-3 text-sm font-semibold text-on-ink">
           Book a free process audit
         </Link>

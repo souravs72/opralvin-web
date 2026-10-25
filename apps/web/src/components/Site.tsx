@@ -80,6 +80,8 @@ export function SiteFooter() {
     { href: "/industries", label: "Industries" },
     { href: "/migration", label: "Migration" },
     { href: "/pricing", label: "Pricing" },
+    { href: "/calculator", label: "Calculator" },
+    { href: "/assessment", label: "Assessment" },
     { href: "/how-we-work", label: "How we work" },
     { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },

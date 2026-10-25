@@ -1,0 +1,16 @@
+{
+  "origin": "http://127.0.0.1:3010",
+  "viewport": "360x800 mobile, 4x CPU, Slow 4G",
+  "lcp_ms": 612,
+  "cls": 0,
+  "tbt_ms": 84,
+  "lcp_ok": true,
+  "cls_ok": true,
+  "tbt_ok": true,
+  "reduced_motion": {
+    "flag": "off",
+    "animation": "none",
+    "tour": true
+  },
+  "three_d": "not shipped"
+}

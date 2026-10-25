@@ -23,6 +23,12 @@ export function LeadForm() {
       utm_source: new URLSearchParams(window.location.search).get("utm_source") ?? undefined,
       utm_medium: new URLSearchParams(window.location.search).get("utm_medium") ?? undefined,
       utm_campaign: new URLSearchParams(window.location.search).get("utm_campaign") ?? undefined,
+      assessment_score: (() => {
+        const raw = sessionStorage.getItem("opralvin_assessment_score");
+        if (raw == null || raw === "") return undefined;
+        const n = Number(raw);
+        return Number.isFinite(n) ? n : undefined;
+      })(),
     };
     const response = await fetch("/api/leads", {
       method: "POST",

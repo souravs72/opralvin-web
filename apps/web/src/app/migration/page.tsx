@@ -1,3 +1,4 @@
+import { MigrationMap } from "@/components/MigrationMap";
 import { Claim, Page } from "@/components/Site";
 import { metaFor } from "@/lib/seo";
 import Link from "next/link";
@@ -10,6 +11,7 @@ export default function MigrationPage() {
       <p className="max-w-prose text-lg">
         We move what a spreadsheet and an opening tool can hold. A desktop accounts-company file is not read.
       </p>
+      <MigrationMap />
       <Claim id="L26">We can import customers, items, and other importable masters from a spreadsheet.</Claim>
       <Claim id="L29">We can create opening sales and purchase invoices.</Claim>
       <Claim id="L16">We can correct stock after a count, including opening stock. This is not a desktop-company import.</Claim>

@@ -124,6 +124,18 @@ export const pages: PageMeta[] = [
     h1: "We move what a spreadsheet and an opening tool can hold.",
   },
   {
+    path: "/calculator",
+    title: "Day-rate calculator — days you can count",
+    description: "Paid work is a day rate times agreed days. If the day rate is unset, the total stays a token. Rupee amounts are not invented.",
+    h1: "Days times a day rate. Not a hidden edition.",
+  },
+  {
+    path: "/assessment",
+    title: "A short look before the process audit",
+    description: "Four yes or no questions that produce a score for the audit call. The product CRM does not store this score.",
+    h1: "Four facts about the books, then a score for the call.",
+  },
+  {
     path: "/pricing",
     title: "Pricing — process audit, then days you can count",
     description: "A free process audit, then Starter, Growth, and Managed work priced as a day rate times agreed days. Rupee amounts are not set.",
