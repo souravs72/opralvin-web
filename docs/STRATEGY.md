@@ -14,7 +14,7 @@ The offer ladder is four scoped offers plus the CA referral: one free Process Au
 
 The owner still has to pick: this positioning, the prices behind `{{STARTER_PRICE}}`, `{{GROWTH_PRICE}}`, `{{MANAGED_PRICE}}`, `{{DAY_RATE}}`, and `{{CA_FEE}}`, the India Compliance revision, and the flagship modules. Phase 2 does not start until those conversations and that pick.
 
-## 2. ICP matrix and beachhead
+## 2. ICP matrix
 
 Scores are copied from `docs/strategy/icp-scoring.csv`. Pain, ability to pay, capability fit, and reachability are each 1 to 5. Fit is capped when the core job needs a banned claim or a Demo-able N path.
 
@@ -139,11 +139,11 @@ Fee: `{{CA_FEE}}` until the owner sets one.
 
 ## 8. Keyword and question map
 
-Clusters, relative demand, and one path each are in `docs/strategy/keywords.csv`. There are no city pages and no volumes. Relative demand is higher, lower, or unknown as a planning label. It is not a search count. Paid lookup was not used.
+Forty keywords, the page each one maps to, and the volume and difficulty marks are in `docs/strategy/keywords.csv`. There is no DataForSEO key, so every volume and every difficulty is `unverified — no API key`. That is not a search count. There are no city pages. Paid lookup was not used.
 
 Paths proposed: `/process-audit`, `/who-its-for/trading`, `/who-its-for/manufacturing`, `/not-a-fit`, `/offers/starter`, `/offers/growth`, `/offers/managed`, `/questions`, `/partners/ca`.
 
-## 9. Funnel and KPIs
+## 9. KPIs
 
 The free Process Audit stays the primary call to action.
 

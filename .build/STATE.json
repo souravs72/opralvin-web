@@ -1,8 +1,8 @@
 {
-  "current_phase": 0,
+  "current_phase": 2,
   "phases": {
-    "0": { "status": "PASSED", "audit_rounds": 2, "sealed_commit": null, "open_issues": [] },
-    "1": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "0": { "status": "PASSED", "audit_rounds": 2, "sealed_commit": "2ac95ad", "open_issues": [] },
+    "1": { "status": "PASSED_WITH_PLACEHOLDERS", "audit_rounds": 1, "sealed_commit": null, "open_issues": [] },
     "2": { "status": "NOT_STARTED", "audit_rounds": 0 },
     "3": { "status": "NOT_STARTED", "audit_rounds": 0 },
     "4": { "status": "NOT_STARTED", "audit_rounds": 0 },

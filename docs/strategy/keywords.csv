@@ -1,11 +1,41 @@
-cluster,relative_demand,url_path,reason,volume_note
-process audit for books stock and GST paperwork,higher,/process-audit,"This is the primary call to action. Relative demand means we would rather be found for this than for a city name. It is not a search volume.",no volume; paid lookup not used
-outgrown a desktop accounts package,higher,/who-its-for/trading,"Matches the recommended calling order: a trading firm with more than one godown.",no volume; paid lookup not used
-stock in more than one godown,higher,/who-its-for/trading,"Same page. One path per cluster. The godown question and the desktop-package question are separate clusters that share one path.",no volume; paid lookup not used
-light manufacturing job card and bill of materials,lower,/who-its-for/manufacturing,"Second call, not the beachhead. The page is proposed because the score is close and the shop-floor tools are demoable.",no volume; paid lookup not used
-what the implementation will not do,higher,/not-a-fit,"The missing Tally reader, the missing GST demo, and the other refusals need one honest page.",no volume; paid lookup not used
-starter onboarding scope,lower,/offers/starter,"One offer, one path.",no volume; paid lookup not used
-growth implementation scope,higher,/offers/growth,"The middle paid offer. Relative demand is higher because it is the offer we expect to explain most often. That expectation is an assumption, not a volume.",no volume; paid lookup not used
-managed service scope,lower,/offers/managed,"The ongoing offer. One path.",no volume; paid lookup not used
-questions before changing the system,higher,/questions,"Objections need a page so the brief is not the only place they live.",no volume; paid lookup not used
-chartered accountant referral,lower,/partners/ca,"The CA path is compared in the 90-day plan and is not the primary call to action.",no volume; paid lookup not used
+keyword,volume,difficulty,url_path,note
+free process audit,unverified — no API key,unverified — no API key,/process-audit,no paid lookup
+process audit for books and stock,unverified — no API key,unverified — no API key,/process-audit,no paid lookup
+what a process audit includes,unverified — no API key,unverified — no API key,/process-audit,no paid lookup
+what a process audit does not include,unverified — no API key,unverified — no API key,/process-audit,no paid lookup
+outgrown a desktop accounts package,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+stock in more than one godown,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+who owes the firm money,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+receivables and how old they are,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+stock balance by godown,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+batch and serial tracking,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+trading firm with one accountant,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+quotation and sales order,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+delivery note and tax invoice,unverified — no API key,unverified — no API key,/who-its-for/trading,no paid lookup
+bill of materials for a small factory,unverified — no API key,unverified — no API key,/who-its-for/manufacturing,no paid lookup
+work order and job card,unverified — no API key,unverified — no API key,/who-its-for/manufacturing,no paid lookup
+send material to a job worker,unverified — no API key,unverified — no API key,/who-its-for/manufacturing,no paid lookup
+spreadsheet import of customers and items,unverified — no API key,unverified — no API key,/offers/starter,no paid lookup
+chart of accounts from a spreadsheet,unverified — no API key,unverified — no API key,/offers/starter,no paid lookup
+opening invoices,unverified — no API key,unverified — no API key,/offers/starter,no paid lookup
+opening stock after a count,unverified — no API key,unverified — no API key,/offers/starter,no paid lookup
+starter onboarding scope,unverified — no API key,unverified — no API key,/offers/starter,no paid lookup
+purchase order and goods inward,unverified — no API key,unverified — no API key,/offers/growth,no paid lookup
+bank reconciliation,unverified — no API key,unverified — no API key,/offers/growth,no paid lookup
+gstr-1 prepared from the books,unverified — no API key,unverified — no API key,/offers/growth,no paid lookup
+growth implementation scope,unverified — no API key,unverified — no API key,/offers/growth,no paid lookup
+day rate times agreed days,unverified — no API key,unverified — no API key,/offers/growth,no paid lookup
+managed support after go-live,unverified — no API key,unverified — no API key,/offers/managed,no paid lookup
+no desktop company file reader,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+e-invoice is not from the sales order,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+e-way bill is not from the sales order,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+gstr-3b download is not portal filing,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+no owner phone app for stock,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+when a packaged accounts tool is enough,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+when an enterprise project is the wrong buy,unverified — no API key,unverified — no API key,/not-a-fit,no paid lookup
+questions before changing the system,unverified — no API key,unverified — no API key,/questions,no paid lookup
+can we export the data if we leave,unverified — no API key,unverified — no API key,/questions,no paid lookup
+salary slip without a pf claim,unverified — no API key,unverified — no API key,/questions,no paid lookup
+lead and deal pipeline,unverified — no API key,unverified — no API key,/questions,no paid lookup
+chartered accountant introduction,unverified — no API key,unverified — no API key,/partners/ca,no paid lookup
+referral is not a software delivery,unverified — no API key,unverified — no API key,/partners/ca,no paid lookup
