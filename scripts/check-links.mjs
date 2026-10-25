@@ -2,11 +2,15 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const site = readFileSync("packages/content/site.ts", "utf8");
-const allowed = new Set([...site.matchAll(/path:\s*"([^"]+)"/g)].map((m) => m[1]));
+const launch = readFileSync("packages/content/launch.ts", "utf8");
+const allowed = new Set(
+  [...site.matchAll(/path:\s*"([^"]+)"/g), ...launch.matchAll(/path:\s*"([^"]+)"/g)].map((m) => m[1]),
+);
 allowed.add("/sitemap.xml");
 allowed.add("/robots.txt");
 allowed.add("/og");
 allowed.add("/api/leads");
+allowed.add("/llms.txt");
 allowed.add("#main");
 
 function files(dir, out = []) {
@@ -26,6 +30,10 @@ for (const path of files("apps/web/src")) {
     if (href.startsWith("/og")) continue;
     if (!allowed.has(href)) hits.push(`${path}: unknown href ${href}`);
   }
+}
+
+for (const match of launch.matchAll(/href:\s*"(\/[^"]*)"/g)) {
+  if (!allowed.has(match[1])) hits.push(`launch.ts: unknown href ${match[1]}`);
 }
 
 if (hits.length) {

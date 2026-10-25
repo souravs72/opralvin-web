@@ -8,6 +8,7 @@
     "./bodies": "./bodies.ts",
     "./events": "./events.ts",
     "./calculator": "./calculator.ts",
-    "./assessment": "./assessment.ts"
+    "./assessment": "./assessment.ts",
+    "./launch": "./launch.ts"
   }
 }

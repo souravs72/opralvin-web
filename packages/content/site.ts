@@ -1,3 +1,5 @@
+import { launchPieces } from "./launch";
+
 export type Claim = { id: string; text: string };
 
 export type PageMeta = {
@@ -189,6 +191,12 @@ export const pages: PageMeta[] = [
     description: "The website is information. A paid statement of work is the contract. Prices on this site are placeholders until the owner sets them.",
     h1: "This site is not the statement of work.",
   },
+  ...launchPieces.map((piece) => ({
+    path: piece.path,
+    title: piece.title,
+    description: piece.description,
+    h1: piece.h1,
+  })),
 ];
 
 export const nav = [

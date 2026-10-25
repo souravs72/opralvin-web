@@ -1,5 +1,6 @@
 import { Claim, Page } from "@/components/Site";
 import { metaFor } from "@/lib/seo";
+import { launchIndex } from "@opralvin/content/launch";
 import Link from "next/link";
 
 export const metadata = metaFor("/resources");
@@ -22,6 +23,15 @@ export default function ResourcesPage() {
           Glossary
         </Link>
       </p>
+      <ul className="max-w-prose list-disc space-y-2 pl-5">
+        {launchIndex.map((piece) => (
+          <li key={piece.path}>
+            <Link href={piece.path} className="underline">
+              {piece.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
       <Claim id="L26">Masters that allow import can be loaded from a spreadsheet.</Claim>
       <table className="w-full max-w-3xl border-collapse text-left text-sm">
         <thead>

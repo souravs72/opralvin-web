@@ -51,8 +51,15 @@ for (const root of roots) {
 }
 
 const site = readFileSync("packages/content/site.ts", "utf8");
-const titleMatches = [...site.matchAll(/title:\s*"([^"]+)"/g)].map((m) => m[1]);
-const descMatches = [...site.matchAll(/description:\s*"([^"]+)"/g)].map((m) => m[1]);
+const launch = readFileSync("packages/content/launch.ts", "utf8");
+const titleMatches = [
+  ...site.matchAll(/title:\s*"([^"]+)"/g),
+  ...launch.matchAll(/title:\s*"([^"]+)"/g),
+].map((m) => m[1]);
+const descMatches = [
+  ...site.matchAll(/description:\s*"([^"]+)"/g),
+  ...launch.matchAll(/description:\s*"([^"]+)"/g),
+].map((m) => m[1]);
 for (const title of titleMatches) {
   if (titles.has(title)) hits.push(`duplicate title: ${title}`);
   titles.set(title, 1);

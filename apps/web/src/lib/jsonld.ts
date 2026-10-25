@@ -55,6 +55,18 @@ export function faqLd(items: { q: string; a: string }[]) {
   };
 }
 
+export function articleLd(path: string) {
+  const page = pageByPath(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: page.title,
+    description: page.description,
+    url: new URL(path, siteUrl()).toString(),
+    author: { "@type": "Organization", name: orgName },
+  };
+}
+
 export function breadcrumbLd(path: string) {
   return {
     "@context": "https://schema.org",
