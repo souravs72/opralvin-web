@@ -1,3 +1,4 @@
+import { SiteFooter, SiteHeader, WhatsAppSticky } from "@/components/Site";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
@@ -21,6 +22,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: "Opralvin One — book a free process audit",
   description:
     "One system for the books, stock, and GST paperwork a growing Indian firm already does. The first meeting is a free process audit.",
@@ -29,7 +31,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-IN" className={`${display.variable} ${text.variable} ${mono.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-paper text-ink">{children}</body>
+      <body className="min-h-full flex flex-col bg-paper text-ink">
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+        <WhatsAppSticky />
+      </body>
     </html>
   );
 }

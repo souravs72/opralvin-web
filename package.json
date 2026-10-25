@@ -5,7 +5,13 @@
     "build": "pnpm --filter @opralvin/web build",
     "test": "python3 -m unittest discover -s apps/frappe-site/opralvin_site/tests -v",
     "secrets": "node scripts/scan-secrets.mjs",
-    "bundle:check": "node scripts/check-client-bundle.mjs"
+    "bundle:check": "node scripts/check-client-bundle.mjs",
+    "lint:copy": "node scripts/check-banned-words.mjs",
+    "lint:links": "node scripts/check-links.mjs",
+    "lint:jsonld": "node scripts/validate-jsonld.mjs"
   },
-  "packageManager": "pnpm@11.18.0"
+  "packageManager": "pnpm@11.18.0",
+  "devDependencies": {
+    "puppeteer-core": "^25.16.0"
+  }
 }

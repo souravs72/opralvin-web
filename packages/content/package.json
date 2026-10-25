@@ -1,5 +1,11 @@
 {
   "name": "@opralvin/content",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "exports": {
+    ".": "./site.ts",
+    "./site": "./site.ts",
+    "./bodies": "./bodies.ts",
+    "./events": "./events.ts"
+  }
 }

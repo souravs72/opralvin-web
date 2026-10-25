@@ -53,3 +53,40 @@ h2 {
   font-weight: 560;
   letter-spacing: -0.03em;
 }
+
+a,
+button {
+  transition:
+    background-color 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--rule);
+  outline-offset: 3px;
+}
+
+.sheet-settle {
+  animation: sheet-settle 360ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes sheet-settle {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet-settle {
+    animation: none;
+  }
+  a,
+  button {
+    transition: none;
+  }
+}
