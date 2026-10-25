@@ -9,7 +9,7 @@ API_BUDGET_INR: "{{API_BUDGET_INR}}"
 |---|---|---|---|---|
 | 0 Environment and capability inventory | PASSED | 2 | .build/phase-0/AUDIT-2.md | 2026-10-25 |
 | 1 Strategy, positioning and offer | PASSED_WITH_PLACEHOLDERS | 1 | .build/phase-1/AUDIT-1.md | 2026-10-25 |
-| 2 Brand and design system | NOT_STARTED | 0 | | |
+| 2 Brand and design system | PASSED_WITH_PLACEHOLDERS | 1 | .build/phase-2/AUDIT-1.md | 2026-10-25 |
 | 3 Architecture | NOT_STARTED | 0 | | |
 | 4 Information architecture and core pages | NOT_STARTED | 0 | | |
 | 5 Signature experiences | NOT_STARTED | 0 | | |

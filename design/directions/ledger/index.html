@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ledger to live — direction study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,560;8..60,640&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #e3e6e0; --ink: #1c1612; --muted: #4a4038; --rule: #8e1e24;
+      --posted: #0e5a3c; --line: #6e6256; --sheet: #fffdf8; --quiet: #e7e0d4; --on-ink: #f4f0e6;
+      --display: "Source Serif 4", "Iowan Old Style", serif;
+      --text: "Source Sans 3", "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    html[data-theme="dark"] {
+      --paper: #161310; --ink: #f3ecdf; --muted: #d4c6b4; --rule: #f0b4b4;
+      --posted: #9ed9b8; --line: #a89880; --sheet: #221e1a; --quiet: #2c2722; --on-ink: #161310;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: var(--ink); }
+    body { font: 400 18px/1.5 var(--text); }
+    a { color: inherit; }
+    .skip { position: absolute; left: 8px; top: -40px; background: var(--ink); color: var(--on-ink); padding: 8px 16px; }
+    .skip:focus { top: 8px; }
+    header, main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; }
+    .mark { font-family: var(--display); font-size: 22px; font-weight: 640; letter-spacing: -0.03em; }
+    .audit {
+      background: var(--ink); color: var(--on-ink); text-decoration: none;
+      padding: 12px 16px; font-weight: 600; font-size: 16px;
+    }
+    .audit:focus-visible { outline: 3px solid var(--rule); outline-offset: 3px; }
+    .hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: start; padding-bottom: 80px; }
+    h1 { font-family: var(--display); font-weight: 560; font-size: 56px; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 28px; }
+    .lede { margin: 0 0 28px; max-width: 38ch; }
+    .note { color: var(--muted); font-size: 14px; margin: 16px 0 0; max-width: 42ch; }
+    .sheet { background: var(--sheet); border: 1px solid var(--line); padding: 16px 16px 8px; }
+    .sheet p { margin: 0; }
+    .k { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); }
+    .row { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); padding: 10px 0; font-size: 16px; }
+    .row b { font-family: var(--mono); font-weight: 500; font-variant-numeric: tabular-nums; }
+    .stamp { display: inline-block; margin-top: 16px; border: 2px solid var(--posted); color: var(--posted); font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 8px; border-radius: 2px; }
+    .rule { height: 2px; background: var(--rule); border: 0; margin: 0 0 48px; }
+    .dense { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 80px; padding-bottom: 128px; }
+    h2 { font-family: var(--display); font-weight: 560; font-size: 32px; line-height: 1.15; margin: 0 0 28px; }
+    ol { margin: 0; padding: 0; list-style: none; }
+    li { display: grid; grid-template-columns: 72px 1fr; gap: 16px; padding: 16px 0; border-top: 1px solid var(--line); }
+    li span:first-child { font-family: var(--mono); font-size: 14px; color: var(--muted); padding-top: 4px; }
+    .stop { border-top: 2px solid var(--rule); padding-top: 16px; }
+    .stop h2 { font-size: 26px; }
+    .theme { font-size: 14px; color: var(--muted); }
+    @media (max-width: 720px) {
+      h1 { font-size: 34px; }
+      .hero, .dense { grid-template-columns: 1fr; gap: 28px; }
+      header { align-items: flex-start; flex-direction: column; }
+      .audit { display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the study</a>
+  <header>
+    <div class="mark">Opralvin One</div>
+    <a class="audit" href="#audit">Book a free process audit</a>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div>
+        <h1>The register, the sheet, and the desktop books. Then one system.</h1>
+        <p class="lede">Opralvin One keeps the quotation, the sales order, the delivery note, the tax invoice, the stock in each godown, and who owes you money in the same books.</p>
+        <a class="audit" id="audit" href="#audit">Book a free process audit</a>
+        <p class="note">The audit is a written look at how you invoice, stock, and file. It is free. It does not include a build, a data move, or a price.</p>
+        <p class="theme"><a href="#dark">Dark paper</a> · <a href="#light">Light paper</a></p>
+      </div>
+      <article class="sheet" aria-label="Illustrative challan becoming a posted line">
+        <p class="k">Illustrative challan. Not a live document.</p>
+        <div class="row"><span>Party</span><b>Sample Traders</b></div>
+        <div class="row"><span>Godown</span><b>Ludhiana main</b></div>
+        <div class="row"><span>Item</span><b>HSN 7214</b></div>
+        <div class="row"><span>Qty inward</span><b>240 bags</b></div>
+        <p class="stamp">Posted to stock</p>
+      </article>
+    </section>
+    <hr class="rule">
+    <section class="dense" aria-labelledby="move">
+      <div>
+        <h2 id="move">What moves across, and how</h2>
+        <ol>
+          <li><span>Sheet</span><span>Customers, suppliers, and items come in from your spreadsheet. The import is a file you can open and check.</span></li>
+          <li><span>Bills</span><span>Opening invoices are entered with the opening-invoice tool, then you sign the list.</span></li>
+          <li><span>Stock</span><span>Opening stock is reconciled godown by godown before anyone sells from the new books.</span></li>
+          <li><span>Chart</span><span>The chart of accounts is imported. You keep an export of the masters.</span></li>
+        </ol>
+      </div>
+      <aside class="stop">
+        <h2>What does not move</h2>
+        <p>There is no reader for a desktop accounts company. We do not pull a file out of that program. If that is the only way you will switch, say so in the audit and we will stop.</p>
+      </aside>
+    </section>
+  </main>
+  <script>
+    function apply() {
+      document.documentElement.dataset.theme = location.hash === "#dark" ? "dark" : "light";
+    }
+    apply();
+    window.addEventListener("hashchange", apply);
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opralvin.local/tokens.schema.json",
+  "type": "object",
+  "required": ["meta", "color", "type", "space", "radius", "shadow", "motion", "contrastPairs"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["direction", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "direction": { "const": "ledger" },
+        "source": { "type": "string", "minLength": 8 }
+      }
+    },
+    "color": {
+      "type": "object",
+      "required": ["light", "dark"],
+      "additionalProperties": false,
+      "properties": {
+        "light": { "$ref": "#/$defs/theme" },
+        "dark": { "$ref": "#/$defs/theme" }
+      }
+    },
+    "type": {
+      "type": "object",
+      "required": ["display", "text", "mono", "scale"],
+      "additionalProperties": false,
+      "properties": {
+        "display": { "type": "object", "required": ["family", "weight"], "properties": { "family": { "type": "string" }, "weight": { "type": "number" }, "opsz": { "type": "number" } } },
+        "text": { "type": "object", "required": ["family", "weight"], "properties": { "family": { "type": "string" }, "weight": { "type": "number" } } },
+        "mono": { "type": "object", "required": ["family", "figures"], "properties": { "family": { "type": "string" }, "weight": { "type": "number" }, "figures": { "const": "tabular-nums" } } },
+        "scale": { "type": "object" }
+      }
+    },
+    "space": { "type": "object" },
+    "radius": {
+      "type": "object",
+      "required": ["control", "stamp"],
+      "additionalProperties": false,
+      "properties": {
+        "control": { "type": "number" },
+        "stamp": { "type": "number" }
+      }
+    },
+    "shadow": {
+      "type": "object",
+      "required": ["sheet"],
+      "additionalProperties": false,
+      "properties": { "sheet": { "type": "string" } }
+    },
+    "motion": {
+      "type": "object",
+      "required": ["durationMs", "easing"],
+      "additionalProperties": false,
+      "properties": {
+        "durationMs": {
+          "type": "object",
+          "required": ["press", "settle"],
+          "additionalProperties": false,
+          "properties": {
+            "press": { "type": "number" },
+            "settle": { "type": "number" }
+          }
+        },
+        "easing": {
+          "type": "object",
+          "required": ["out"],
+          "additionalProperties": false,
+          "properties": { "out": { "type": "string" } }
+        }
+      }
+    },
+    "contrastPairs": {
+      "type": "array",
+      "minItems": 18,
+      "items": {
+        "type": "object",
+        "required": ["theme", "fg", "bg", "min", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "theme": { "enum": ["light", "dark"] },
+          "fg": { "type": "string" },
+          "bg": { "type": "string" },
+          "min": { "enum": [3, 4.5] },
+          "role": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "theme": {
+      "type": "object",
+      "required": ["paper", "ink", "muted", "rule", "posted", "line", "sheet", "quiet", "onInk"],
+      "additionalProperties": false,
+      "properties": {
+        "paper": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "ink": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "muted": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "rule": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "posted": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "line": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "sheet": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "quiet": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "onInk": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+      }
+    }
+  }
+}
