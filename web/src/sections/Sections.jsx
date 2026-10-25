@@ -132,10 +132,10 @@ function Head({ kind, no, date, to = "Bill to" }) {
   );
 }
 const DOCS = [
-  { id: "inv", name: "Tax invoice", w: 560, body: () => (<><Head kind="TAX INVOICE" no="SINV-0001" date="24 Oct 2026" /><Items /><p className="words">Rupees fifty-nine thousand only</p><div className="dfoot"><div className="qr" aria-hidden="true">{QR.map((on, i) => <i key={i} className={on ? "" : "o"} />)}</div><div className="irn"><span>e-Invoice IRN generated</span><span>e-Way bill generated</span></div></div></>) },
+  { id: "inv", name: "Tax invoice", w: 560, body: () => (<><Head kind="TAX INVOICE" no="SINV-0001" date="24 Oct 2026" /><Items /><p className="words">Rupees fifty-nine thousand only</p><div className="dfoot"><div className="qr" aria-hidden="true">{QR.map((on, i) => <i key={i} className={on ? "" : "o"} />)}</div><div className="irn"><span>Illustrative layout</span><span>Not a live GST document</span></div></div></>) },
   { id: "quo", name: "Quotation", w: 560, body: () => (<><Head kind="QUOTATION" no="QTN-0001" date="20 Oct 2026" to="For" /><Items /><p className="words">Valid until 3 Nov 2026. Delivery within 5 working days.</p></>) },
   { id: "dc", name: "Delivery challan", w: 460, body: () => (<><div className="dh"><b className="co">Your Company Pvt. Ltd.</b><span className="kind">DELIVERY CHALLAN<br /><small>DN-0001</small></span></div><div className="meta"><div>Deliver to<b>Example Traders</b></div><div>Date<b>24 Oct 2026</b></div><div>Vehicle no.<b>MH 12 AB 4521</b></div><div>Batch<b>B-2410</b></div></div><table><thead><tr><th>Item</th><th className="n">Qty</th></tr></thead><tbody><tr><td>Steel Rod 12 mm</td><td className="n">10</td></tr><tr className="tot"><td>Total units</td><td className="n">10</td></tr></tbody></table><p className="words">Received in good condition: ______________</p></>) },
-  { id: "rem", name: "Payment reminder", w: 460, body: () => (<div className="mail"><div className="mh"><span>From <b>accounts@yourcompany.in</b></span><span>To <b>Example Traders</b></span><span>Subject <b>Payment due on 30 Oct: SINV-0001</b></span></div><p>Dear Example Traders,</p><p>This is a reminder that invoice SINV-0001 for ₹59,000 is due on 30 October 2026. The invoice is attached for your records.</p><p>If you have already paid, please ignore this message.</p><p>Regards,<br />Accounts, Your Company</p><p className="words">Sent automatically, 3 days before the due date</p></div>) },
+  { id: "rem", name: "Payment reminder", w: 460, body: () => (<div className="mail"><div className="mh"><span>From <b>accounts@yourcompany.in</b></span><span>To <b>Example Traders</b></span><span>Subject <b>Payment due on 30 Oct: SINV-0001</b></span></div><p>Dear Example Traders,</p><p>This is a reminder that invoice SINV-0001 for ₹59,000 is due on 30 October 2026. The invoice is attached for your records.</p><p>If you have already paid, please ignore this message.</p><p>Regards,<br />Accounts, Your Company</p><p className="words">Illustrative reminder. Not a claim that messages send themselves.</p></div>) },
   { id: "rep", name: "Daily sales report", w: 380, body: () => (<><div className="dh"><b className="co">Daily sales</b><span className="kind">24 OCT 2026</span></div><div className="kpis two"><div><b>₹1,84,000</b><span>Sales today</span></div><div><b>7</b><span>Orders</span></div><div><b>₹1,12,500</b><span>Collected</span></div><div><b>2</b><span>Low on stock</span></div></div><p className="words">Sent to the owner at 9:00 AM. Sample figures.</p></>) },
 ];
 export function Docs() {
@@ -145,7 +145,7 @@ export function Docs() {
     <section className="docs wrap" id="docs" aria-labelledby="h-docs">
       <div className="docs-left">
         <h2 id="h-docs">Your paperwork, already done.</h2>
-        <p>Every document comes out in your branding, filled from the order, GST included. Pick one.</p>
+        <p>These are illustrative layouts, not a live GST document. An e-invoice is not generated from the sales order. Pick one.</p>
         <div className="outs" role="group" aria-label="Documents">
           {DOCS.map((x) => (
             <button key={x.id} className="out" aria-pressed={cur === x.id} onClick={() => setCur(x.id)}>{x.name}</button>
@@ -175,7 +175,7 @@ export function Film() {
       <div className="wrap stills">
         <figure><img src="media/still-13.jpg" alt="Every business works differently: pricing, approvals, paperwork" width="1600" height="900" loading="lazy" /><figcaption>The problem: software that makes you work its way</figcaption></figure>
         <figure><img src="media/still-41.jpg" alt="A sales order with custom batch, vehicle and site fields" width="1600" height="900" loading="lazy" /><figcaption>Your forms, with the fields you track</figcaption></figure>
-        <figure><img src="media/still-60.jpg" alt="A branded GST tax invoice with e-invoice and e-way bill generated" width="1600" height="900" loading="lazy" /><figcaption>Your documents, GST-ready in one click</figcaption></figure>
+        <figure><img src="media/still-60.jpg" alt="An illustrative tax invoice layout, not a live GST document" width="1600" height="900" loading="lazy" /><figcaption>Illustrative document. Not a live GST demo.</figcaption></figure>
       </div>
     </section>
   );
@@ -185,8 +185,8 @@ export function Film() {
 const STEPS = [
   ["We sit with your team and map how work really moves.", "Who takes the order, who approves it, which register they write in. We learn the business before we touch the software."],
   ["We shape the system around what we saw.", "Your fields, approval rules, document formats and the reports you check every morning."],
-  ["We move your data and train every person who uses it.", "Customers, items, opening stock and balances come across. Each role learns the screens for its job."],
-  ["We host it, back it up and stay with you.", "A secure cloud with automatic backups, and a team that answers when you need a new report or rule."],
+  ["We move your data and train every person who uses it.", "The move is a spreadsheet import, opening invoices, opening stock, and a chart of accounts. There is no reader for a desktop company file. Each role learns the screens for its job."],
+  ["We stay with you after go-live.", "Hosting and automatic backups are not a product claim yet. Support scope is agreed in writing before work starts."],
 ];
 const ROWS = ["Study your business", "Design and customise", "Move data, train team", "Go live on secure cloud", "Ongoing support"];
 export function Rollout() {

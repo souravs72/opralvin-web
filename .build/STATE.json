@@ -1,0 +1,29 @@
+{
+  "current_phase": 0,
+  "phases": {
+    "0": { "status": "PASSED", "audit_rounds": 2, "sealed_commit": null, "open_issues": [] },
+    "1": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "2": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "3": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "4": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "5": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "6": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "7": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "8": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "9": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "10": { "status": "NOT_STARTED", "audit_rounds": 0 },
+    "11": { "status": "NOT_STARTED", "audit_rounds": 0 }
+  },
+  "owner_todos": [
+    "Name the India Compliance revision that boots on this ERP major version",
+    "Confirm the flagship module list",
+    "Say whether PF/ESI may be named",
+    "Say which POS is the product",
+    "Say whether the UAE app stays separate",
+    "Confirm Starter, Growth, Managed, day rate, and CA fee",
+    "Provide domain, public email, WhatsApp number, city, booking link",
+    "Provide a DataForSEO API key if live keyword volumes are required",
+    "Provide Frappe Cloud credentials before any site install"
+  ],
+  "blocked": null
+}

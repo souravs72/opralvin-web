@@ -1,0 +1,14 @@
+COPY_START 2026-10-25T13:04:50.056Z
+kept /home/ascra/.claude/skills/openseo-ai-prompt-research
+kept /home/ascra/.claude/skills/openseo-ai-visibility-audit
+kept /home/ascra/.claude/skills/openseo-competitive-landscape
+kept /home/ascra/.claude/skills/openseo-competitor-analysis
+kept /home/ascra/.claude/skills/openseo-keyword-clustering
+kept /home/ascra/.claude/skills/openseo-keyword-research
+kept /home/ascra/.claude/skills/openseo-link-prospecting
+kept /home/ascra/.claude/skills/openseo-local-seo
+kept /home/ascra/.claude/skills/openseo-seo-audit
+kept /home/ascra/.claude/skills/openseo-seo-coach
+kept /home/ascra/.claude/skills/openseo-seo-project-setup
+kept /home/ascra/.claude/skills/openseo-seo-report
+COPY_END 2026-10-25T13:04:50.096Z

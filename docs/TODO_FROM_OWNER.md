@@ -50,6 +50,10 @@ These apps are on the bench. Their names alone are enough to identify clients or
 - `unicom_chemist`
 - `vsd_fleet_ms`
 
+## Other apps on the bench, not client work
+
+- `wiki` is the generic wiki app. It is not a client product, it is not in the flagship sentence, and it is not used as an example. Every other directory under `apps/` is either this client list or the product stack named in `docs/CAPABILITIES.md`.
+
 Site directories present, also off limits for screenshots and examples:
 
 - `agency-billing.localhost`
