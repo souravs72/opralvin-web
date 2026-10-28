@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://souravs72.github.io/opralvin-web/sitemap.xml
