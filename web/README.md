@@ -1,6 +1,6 @@
 # Opralvin One — marketing site
 
-Vite + React 18 + React Three Fiber (three.js) + GSAP ScrollTrigger + Lenis.
+Vite + React 18. The public site is a flat page. Colour, type, and timing come from MOTION.md.
 
 ## Run locally
     npm install
@@ -16,6 +16,5 @@ or push to GitHub and import the repo at vercel.com/new.
 
 ## Edit
 - Copy, departments, the order flow, FAQ, contact email: src/data.js
-- 3D model: src/scene/Scene.jsx (scroll chapters in data.js → CH)
 - Sections: src/sections/
 - Film and stills: public/media/

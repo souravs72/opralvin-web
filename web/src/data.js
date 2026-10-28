@@ -1,16 +1,13 @@
-// Departments shown in the 3D model. `sub` is the line printed on each tile.
 export const DEPTS = [
-  { id: "sales", name: "Sales", sub: "Orders & quotes" },
-  { id: "inventory", name: "Inventory", sub: "Stock & godowns" },
-  { id: "accounting", name: "Accounting", sub: "Ledgers & GST" },
-  { id: "purchase", name: "Purchase", sub: "Vendors & bills" },
-  { id: "manufacturing", name: "Manufacturing", sub: "BOM & production" },
-  { id: "hr", name: "HR & Payroll", sub: "People & salaries" },
-  { id: "projects", name: "Projects", sub: "Tasks & costing" },
-  { id: "pos", name: "Point of Sale", sub: "Counter billing" },
+  { id: "sales", name: "Sales", sub: "Orders and quotes" },
+  { id: "inventory", name: "Stock", sub: "Godowns and counts" },
+  { id: "accounting", name: "Accounts", sub: "Ledgers and GST files" },
+  { id: "purchase", name: "Purchase", sub: "Vendors and bills" },
+  { id: "manufacturing", name: "Make", sub: "BOM and work orders" },
+  { id: "hr", name: "People", sub: "Attendance and slips" },
+  { id: "school", name: "School", sub: "Admissions, attendance, and fees" },
 ];
 
-// Scroll chapters of the story section, as fractions of its scroll length.
 export const CH = {
   hero: [0, 0.14],
   scatter: [0.14, 0.34],
@@ -19,26 +16,58 @@ export const CH = {
   settle: [0.88, 1],
 };
 
-// The order that travels through the model in the "flow" chapter.
 export const FLOW = [
-  { dept: "sales", title: "Sales order", detail: "Example Traders, 10 units, ₹50,000" },
-  { dept: "inventory", title: "Delivery", detail: "Stock 120 → 110, challan printed" },
-  { dept: "accounting", title: "GST invoice", detail: "Illustrative invoice. An e-invoice comes from the sales invoice, not the sales order." },
-  { dept: "accounting", title: "Payment", detail: "Illustrative payment, matched to that invoice." },
-  { dept: "hub", title: "Books updated", detail: "Ledger, stock and reports agree" },
+  { dept: "sales", title: "Quotation", detail: "Illustrative. A quote on one party." },
+  { dept: "inventory", title: "Delivery note", detail: "Illustrative challan. Stock in a named godown." },
+  { dept: "accounting", title: "Tax invoice", detail: "Illustrative invoice. An e-invoice comes from the sales invoice, not the sales order." },
+  { dept: "hub", title: "Posted", detail: "Ledger, stock, and who owes money agree." },
 ];
 
 export const FAQ = [
-  ["What is Opralvin One?", "One business management system covering accounting, inventory, sales, purchase, manufacturing, HR and payroll, projects and point of sale, set up and customised for your business."],
-  ["Do I have to change how we work?", "No. We study how you work first, then shape fields, approvals, documents and reports around it."],
-  ["Is it ready for GST?", "A tax invoice can be raised. An e-invoice is generated from the sales invoice, and an e-way bill from the delivery or the invoice, not from the sales order. This checkout cannot show a live GST portal demo."],
-  ["What happens to our existing data?", "The move is a spreadsheet import, opening invoices, opening stock, and a chart of accounts. There is no reader for a desktop company file."],
-  ["Who trains the team?", "We do. Each role learns the screens for its own job, so the store sees stock and accounts sees finance."],
-  ["Where does it run?", "The team can work in a browser. Hosting and automatic backups are not a product claim in this checkout."],
-  ["Can it change as we grow?", "Yes. New fields, reports, rules and departments are added later without starting over."],
-  ["What does it cost?", "It depends on the departments and the customisation you need. After the free walkthrough you get a written quote with the scope spelled out."],
-  ["How long does setup take?", "It depends on your size and how much we customise. We agree the timeline with you, phase by phase, before work starts."],
-  ["Who owns the data?", "You do. It is your business record, and you can export it whenever you want."],
+  [
+    "What is Opralvin One?",
+    "One system for the books and the stock. A purchase receipt posts quantity and value together. A delivery note and the tax invoice share the customer. Sales, purchase, inventory, accounting, manufacturing, and a salary slip when payroll is included.",
+  ],
+  [
+    "Do we have to change how we work?",
+    "We sit with the owner and the person who posts. Fields, approvals, and the morning report follow that note. The first meeting is a free process audit.",
+  ],
+  [
+    "Is it ready for GST?",
+    "A tax invoice can be raised. An e-invoice comes from the sales invoice. An e-way bill comes from the delivery or the invoice. GSTR-3B opens as a file.",
+  ],
+  [
+    "What happens to our existing data?",
+    "Opening invoices, opening stock, and a chart of accounts come across from a spreadsheet.",
+  ],
+  [
+    "Who trains the team?",
+    "We do. Each role learns the screens for its own job.",
+  ],
+  [
+    "Where does it run?",
+    "The team works in a browser. Support hours are agreed in writing.",
+  ],
+  [
+    "What does it cost?",
+    "The audit is free. Paid work is a day rate for the days we agree.",
+  ],
+  [
+    "How long does setup take?",
+    "Thirty days to an invoice. Sixty days to stock that matches a count. Ninety days to a signed limit list.",
+  ],
+  [
+    "Who owns the data?",
+    "You do. The firm keeps its export.",
+  ],
+  [
+    "What if stock and the books live in two packages?",
+    "A purchase receipt posts the warehouse quantity and the stock value together. Freight is added on a landed cost voucher. There is no second export to repair at month-end.",
+  ],
+  [
+    "Can a school use the same system?",
+    "An applicant becomes a student without retyping the name. Attendance, a grade book, a fee schedule, and a sales invoice share that record. Paying from the student screen needs a gateway the school already has.",
+  ],
 ];
 
 export const CONTACT = "{{PUBLIC_EMAIL}}";
