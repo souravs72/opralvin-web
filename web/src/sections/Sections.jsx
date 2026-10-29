@@ -312,7 +312,7 @@ export function Letter() {
         <p>
           I posted books, then built the system around that posting. Opralvin One keeps the warehouse and the books on one record. A school can keep the student and the fees there too.
         </p>
-        <p>The first call is a free process audit. Paid work, if you want it, is agreed in writing.</p>
+        <p>The first meeting is a free process audit. Paid work is a day rate for the days we agree.</p>
         <div className="sign"><span className="avatar" aria-hidden="true">SS</span><div><b>Sourav Singh</b><span>Founder, Opralvin Technologies</span></div></div>
       </div>
       </div>

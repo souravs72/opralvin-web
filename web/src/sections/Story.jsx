@@ -31,6 +31,33 @@ export default function Story() {
           <figcaption>Sample. Northline, 24 Oct 2026.</figcaption>
         </figure>
       </div>
+      <div className="wrap split" id="split">
+        <h2>Where the numbers split.</h2>
+        <ul>
+          <li>
+            <a href="#ledger">
+              <strong>Warehouse and the books</strong>
+              <span>A purchase receipt posts the quantity and the value once. Freight is a landed cost voucher.</span>
+              <span className="go">See the posting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#docs">
+              <strong>Papers a buyer asks for</strong>
+              <span>An e-invoice is raised from the sales invoice. A sales order cannot raise one.</span>
+              <span className="go">See the paperwork</span>
+            </a>
+          </li>
+          <li>
+            <a href="#school">
+              <strong>A student and the fees</strong>
+              <span>An applicant becomes a student without retyping the name. Paying on that screen needs a gateway the school already has.</span>
+              <span className="go">See the student record</span>
+            </a>
+          </li>
+        </ul>
+        <p>Paid work is a day rate for the days we agree.</p>
+      </div>
     </section>
   );
 }
