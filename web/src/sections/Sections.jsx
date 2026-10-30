@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DEPTS, FAQ, CONTACT } from "../data.js";
+import SlidingTabs from "../ui/SlidingTabs.jsx";
 
 /* ---------------- We shape it around you ---------------- */
 const SHAPES = [
@@ -29,11 +30,17 @@ function ShapePanel({ id }) {
         <div className="rule"><span>Purchase above ₹50,000</span><b>Owner</b></div>
         <div className="rule"><span>Discount above 10%</span><b>Manager</b></div>
         <div className="req enter" style={{ animationDelay: "120ms" }}>
-          <div><b>Purchase PO-0042</b><span>₹75,000, sent to Owner</span></div>
+          <div>
+            <b>Purchase PO-0042</b>
+            <span>₹75,000, sent to Owner</span>
+          </div>
           <em className="ok">Approved</em>
         </div>
         <div className="req enter" style={{ animationDelay: "220ms" }}>
-          <div><b>Discount on SO-0001</b><span>15%, sent to Manager</span></div>
+          <div>
+            <b>Discount on SO-0001</b>
+            <span>15%, sent to Manager</span>
+          </div>
           <em className="wait">With manager</em>
         </div>
       </div>
@@ -79,13 +86,13 @@ export function Shape() {
         </p>
       </div>
       <div className="shape-grid">
-        <div className="tabs" role="tablist" aria-label="What we customise">
+        <SlidingTabs label="What we customise" current={cur}>
           {SHAPES.map((s) => (
             <button key={s.id} role="tab" id={`tab-${s.id}`} aria-selected={cur === s.id} aria-controls="shape-panel" className="tab" onClick={() => setCur(s.id)}>
               {s.label}
             </button>
           ))}
-        </div>
+        </SlidingTabs>
         <div className="shape-stage" role="tabpanel" id="shape-panel" aria-labelledby={`tab-${cur}`}>
           <ShapePanel id={cur} />
           <p className="shape-text" key={cur}>{c.text}</p>
@@ -122,7 +129,7 @@ const DOCS = [
   { id: "inv", name: "Tax invoice", w: 560, body: () => (<><Head kind="TAX INVOICE" no="SINV-0001" date="24 Oct 2026" /><Items /><p className="words">Rupees fifty-nine thousand only. Sample.</p></>) },
   { id: "quo", name: "Quotation", w: 560, body: () => (<><Head kind="QUOTATION" no="QTN-0001" date="20 Oct 2026" to="For" /><Items /><p className="words">Valid until 3 Nov 2026. Delivery within 5 working days.</p></>) },
   { id: "dc", name: "Delivery note", w: 460, body: () => (<><div className="dh"><b className="co">Northline</b><span className="kind">Delivery note<br /><small>DN-0001</small></span></div><div className="meta"><div>Deliver to<b>Riverside Metals</b></div><div>Date<b>24 Oct 2026</b></div><div>Vehicle no.<b>MH 12 AB 4521</b></div><div>Batch<b>B-2410</b></div></div><table><thead><tr><th>Item</th><th className="n">Qty</th></tr></thead><tbody><tr><td>12 mm steel rod</td><td className="n">10</td></tr><tr className="tot"><td>Total units</td><td className="n">10</td></tr></tbody></table><p className="words">Received in good condition: ______________</p></>) },
-  { id: "pr", name: "Purchase receipt", w: 560, body: () => (<><div className="dh"><b className="co">Northline</b><span className="kind">Purchase receipt<br /><small>PR-0001</small></span></div><div className="meta"><div>Supplier<b>Apex Mills</b></div><div>Date<b>24 Oct 2026</b></div><div>Warehouse<b>Main</b></div><div>Batch<b>B-2410</b></div></div><table><thead><tr><th>Item</th><th className="n">Qty</th><th className="n">Amount</th></tr></thead><tbody><tr><td>12 mm steel rod</td><td className="n">10</td><td className="n">₹50,000</td></tr><tr className="tot"><td>Received</td><td className="n">10</td><td className="n">₹50,000</td></tr></tbody></table><p className="words">Sample. Quantity and value post together. Freight is a landed cost voucher.</p></>) },
+          { id: "pr", name: "Purchase receipt", w: 560, body: () => (<><div className="dh"><b className="co">Northline</b><span className="kind">Purchase receipt<br /><small>PR-0001</small></span></div><div className="meta"><div>Supplier<b>Apex Mills</b></div><div>Date<b>24 Oct 2026</b></div><div>Accepted warehouse<b>Main</b></div><div>Batch<b>B-2410</b></div></div><table><thead><tr><th>Item</th><th className="n">Qty</th><th className="n">Amount</th></tr></thead><tbody><tr><td>12 mm steel rod</td><td className="n">10</td><td className="n">₹50,000</td></tr><tr className="tot"><td>Total quantity</td><td className="n">10</td><td className="n">₹50,000</td></tr></tbody></table><p className="words">Sample. Quantity and value post together. Freight is a landed cost voucher.</p></>) },
   { id: "rem", name: "Payment reminder", w: 460, body: () => (<div className="mail"><div className="mh"><span>From <b>Accounts, Northline</b></span><span>To <b>Riverside Metals</b></span><span>Subject <b>Payment due on 30 Oct: SINV-0001</b></span></div><p>Dear Riverside Metals,</p><p>Invoice SINV-0001 for ₹59,000 is due on 30 October 2026.</p><p>Regards,<br />Accounts, Northline</p></div>) },
   { id: "rep", name: "Daily sales report", w: 380, body: () => (<><div className="dh"><b className="co">Daily sales</b><span className="kind">24 Oct 2026<br /><small>Sample</small></span></div><div className="kpis two"><div><b>₹1,84,000</b><span>Sales today</span></div><div><b>7</b><span>Orders</span></div><div><b>₹1,12,500</b><span>Collected</span></div><div><b>2</b><span>Low on stock</span></div></div></>) },
 ];
@@ -152,34 +159,48 @@ export function Docs() {
 }
 
 /* ---------------- One posting ---------------- */
-const POSTING = [
-  ["Purchase receipt", "PR-0001", "Main warehouse, 10 units of 12 mm steel rod"],
-  ["Stock ledger", "Inward", "The same 10 units, in that warehouse"],
-  ["General ledger", "Stock in hand", "The value of that receipt"],
-];
-
 export function Ledger() {
   return (
     <section className="ledger band" id="ledger" aria-labelledby="h-ledger">
-      <div className="wrap plate ledger-plate" data-tilt>
-        <div className="docs-left">
-          <h2 id="h-ledger">One receipt for the warehouse and the books.</h2>
-          <p>
-            Freight sits on a landed cost voucher. A count is a stock reconciliation.
-          </p>
+      <div className="wrap ledger-plate">
+        <div className="ledger-head">
+          <h2 id="h-ledger">One receipt.</h2>
+          <p>Quantity and value post together.</p>
         </div>
-        <div className="ui" data-ui>
-          <div className="postrow">
-          {POSTING.map(([a, b, c]) => (
-            <div className="postline" key={a}>
-              <b>{a}</b>
-              <span>{b}</span>
-              <em>{c}</em>
+        <div className="posting" data-ui>
+          <article className="voucher">
+            <div className="dh">
+              <b className="co">Northline</b>
+              <span className="kind">Purchase receipt<br /><small>PR-0001</small></span>
             </div>
-          ))}
+            <div className="meta">
+              <div>Supplier<b>Apex Mills</b></div>
+              <div>Date<b>24 Oct 2026</b></div>
+              <div>Accepted warehouse<b>Main</b></div>
+              <div>Batch<b>B-2410</b></div>
+            </div>
+            <table>
+              <thead><tr><th>Item</th><th className="n">Qty</th><th className="n">Amount</th></tr></thead>
+              <tbody>
+                <tr><td>12 mm steel rod</td><td className="n">10</td><td className="n">₹50,000</td></tr>
+                <tr className="tot"><td>Received</td><td className="n">10</td><td className="n">₹50,000</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <div className="post-targets">
+            <div>
+              <p>Stock ledger</p>
+              <p className="amt">+10</p>
+              <p>Main. Inward.</p>
+            </div>
+            <div>
+              <p>General ledger</p>
+              <p className="amt">₹50,000</p>
+              <p>Stock in hand.</p>
+            </div>
           </div>
-          <p className="words">Sample. A transfer between two warehouses posts the same way.</p>
         </div>
+        <p className="words">Sample. Freight is a landed cost voucher. A count is a stock reconciliation.</p>
       </div>
     </section>
   );
@@ -306,15 +327,20 @@ export function Rollout() {
 export function Letter() {
   return (
     <section className="letter band" id="letter" aria-labelledby="h-letter">
-      <div className="wrap plate" data-tilt>
-      <div className="letter-in">
-        <h2 id="h-letter">From the founder.</h2>
-        <p>
-          I posted books, then built the system around that posting. Opralvin One keeps the warehouse and the books on one record. A school can keep the student and the fees there too.
-        </p>
-        <p>The first meeting is a free process audit. Paid work is a day rate for the days we agree.</p>
-        <div className="sign"><span className="avatar" aria-hidden="true">SS</span><div><b>Sourav Singh</b><span>Founder, Opralvin Technologies</span></div></div>
-      </div>
+      <div className="wrap letter-mosaic">
+        <div className="letter-in">
+          <h2 id="h-letter">From the founder.</h2>
+          <p>
+            I posted books, then built the system around that posting. Opralvin One keeps the warehouse and the books on one record. A school can keep the student and the fees there too.
+          </p>
+          <p>The first meeting is a free process audit. Paid work is a day rate for the days we agree.</p>
+          <div className="sign"><span className="avatar" aria-hidden="true">SS</span><div><b>Sourav Singh</b><span>Founder, Opralvin Technologies</span></div></div>
+        </div>
+        <aside className="letter-facts" aria-label="Setup times we commit to in writing">
+          <p><b>30 days</b><span>to an invoice</span></p>
+          <p><b>60 days</b><span>to stock that matches a count</span></p>
+          <p><b>90 days</b><span>to a signed limit list</span></p>
+        </aside>
       </div>
     </section>
   );
@@ -323,13 +349,20 @@ export function Letter() {
 /* ---------------- FAQ ---------------- */
 export function Questions() {
   return (
-    <section className="faq band" id="faq" aria-labelledby="h-faq">
-      <div className="wrap plate" data-tilt>
-      <h2 id="h-faq">Questions owners ask.</h2>
-      <div className="qa">
-        {FAQ.map(([q, a]) => (<p key={q}><b>{q}</b> {a}</p>))}
+    <section className="faq" id="faq" aria-labelledby="h-faq">
+      <div className="faq-head">
+        <div className="wrap">
+          <h2 id="h-faq">Questions owners ask.</h2>
+        </div>
       </div>
-      </div>
+      {FAQ.map(([q, a], i) => (
+        <article className="faq-band" key={q} data-tone={i % 2 === 0 ? "sheet" : "ground"}>
+          <div className="wrap faq-row">
+            <h3>{q}</h3>
+            <p>{a}</p>
+          </div>
+        </article>
+      ))}
     </section>
   );
 }
@@ -355,11 +388,11 @@ export function Book() {
   };
   return (
     <section className="book band" id="book" aria-labelledby="h-book">
-      <div className="wrap book-in plate book-plate" data-tilt>
-        <div>
-          <h2 id="h-book">Book a free process audit.</h2>
-          <p className="lead">Mark the desks you run today. We use this only to call you about a process audit.</p>
-        </div>
+      <div className="wrap book-close">
+        <h2 id="h-book">Book a free process audit.</h2>
+        <p className="lead">The audit is free. Paid work is a day rate for the days we agree. Mark the desks you run today so we know who to sit with.</p>
+      </div>
+      <div className="wrap book-in">
         <div className="book-right">
           <fieldset className="depts">
             <legend className="sr">Departments you run</legend>
@@ -393,18 +426,27 @@ export function Footer() {
   return (
     <footer className="foot" id="foot">
       <div className="wrap foot-in">
-        <nav aria-label="Footer">
-          <a href="#story">Start</a>
-          <a href="#shape">What we change</a>
-          <a href="#ledger">One posting</a>
-          <a href="#school">Schools</a>
-          <a href="#docs">The papers</a>
-          <a href="#how">How we work</a>
-          <a href="#book">Book a free process audit</a>
-        </nav>
-        <p className="foot-tag">Simplify Today. Grow Tomorrow.</p>
-        <p className="wordmark" aria-hidden="true">Opralvin</p>
-        <div className="legal"><span>© 2026 Opralvin Technologies</span><span>Sample names and figures on this page are illustrative.</span></div>
+        <p className="wordmark">Opralvin</p>
+        <div className="foot-row">
+          <div className="foot-places">
+            <p className="foot-tag">Simplify Today. Grow Tomorrow.</p>
+            <a href="#book">Book a free process audit</a>
+            <span>Sourav Singh</span>
+          </div>
+          <nav aria-label="Footer">
+            <a href="#story">Start</a>
+            <a href="#shape">What we change</a>
+            <a href="#ledger">One posting</a>
+            <a href="#school">Schools</a>
+            <a href="#docs">The papers</a>
+            <a href="#how">How we work</a>
+          </nav>
+        </div>
+        <div className="legal">
+          <span>© 2026 Opralvin Technologies</span>
+          <a href="#story">Back to start</a>
+          <span>Sample names and figures on this page are illustrative.</span>
+        </div>
       </div>
     </footer>
   );

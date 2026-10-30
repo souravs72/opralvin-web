@@ -38,3 +38,5 @@ __pycache__/
 Thumbs.db
 .idea/
 *.sw?
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
