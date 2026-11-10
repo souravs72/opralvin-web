@@ -16,7 +16,7 @@ export default function Story() {
         ease: "power3.out",
         stagger: 0.11,
       });
-      gsap.from(".story-talk, .acts", {
+      gsap.from(".story-talk, .posting", {
         opacity: 0,
         duration: 0.5,
         delay: 0.95,
@@ -28,26 +28,7 @@ export default function Story() {
 
   return (
     <section className="story" id="story" aria-label="Opralvin One" ref={root}>
-      <div className="story-mast">
-        <figure className="triad" aria-label="Sample figures for one delivery to Riverside Metals" data-ui>
-          <div>
-            <p>Sales</p>
-            <p className="amt">₹59,000</p>
-            <p>SINV-0001</p>
-          </div>
-          <div>
-            <p>Warehouse</p>
-            <p className="amt">10</p>
-            <p>12 mm steel rod</p>
-          </div>
-          <div>
-            <p>Accounts</p>
-            <p className="amt">Open</p>
-            <p>Still unpaid</p>
-          </div>
-          <figcaption>Sample. Northline, 24 Oct 2026.</figcaption>
-        </figure>
-      </div>
+      <div className="hero-dark">
       <div className="wrap story-hero">
         <h1>
           <span className="mask"><span className="hline">The same goods.</span></span>
@@ -59,6 +40,43 @@ export default function Story() {
             <a className="btn amber" href="#book">Book a free process audit</a>
           </div>
         </div>
+      </div>
+      <div className="wrap posting-wrap" id="ledger">
+        <div className="posting" data-ui aria-label="Sample purchase receipt PR-0001">
+          <article className="voucher">
+            <div className="dh">
+              <b className="co">Northline</b>
+              <span className="kind">Purchase receipt<br /><small>PR-0001</small></span>
+            </div>
+            <div className="meta">
+              <div>Supplier<b>Apex Mills</b></div>
+              <div>Date<b>24 Oct 2026</b></div>
+              <div>Accepted warehouse<b>Main</b></div>
+              <div>Batch<b>B-2410</b></div>
+            </div>
+            <table>
+              <thead><tr><th>Item</th><th className="n">Qty</th><th className="n">Amount</th></tr></thead>
+              <tbody>
+                <tr><td>12 mm steel rod</td><td className="n">10</td><td className="n">₹50,000</td></tr>
+                <tr className="tot"><td>Received</td><td className="n">10</td><td className="n">₹50,000</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <div className="post-targets">
+            <div>
+              <p>Stock ledger</p>
+              <p className="amt">+10</p>
+              <p>Main. Inward.</p>
+            </div>
+            <div>
+              <p>General ledger</p>
+              <p className="amt">₹50,000</p>
+              <p>Stock in hand.</p>
+            </div>
+          </div>
+        </div>
+        <p className="words">Sample. Northline, 24 Oct 2026. Freight is a landed cost voucher. A count is a stock reconciliation.</p>
+      </div>
       </div>
       <div className="wrap split" id="split">
         <h2>Where they split.</h2>

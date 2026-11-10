@@ -158,54 +158,6 @@ export function Docs() {
   );
 }
 
-/* ---------------- One posting ---------------- */
-export function Ledger() {
-  return (
-    <section className="ledger band" id="ledger" aria-labelledby="h-ledger">
-      <div className="wrap ledger-plate">
-        <div className="ledger-head">
-          <h2 id="h-ledger">One receipt.</h2>
-          <p>Quantity and value post together.</p>
-        </div>
-        <div className="posting" data-ui>
-          <article className="voucher">
-            <div className="dh">
-              <b className="co">Northline</b>
-              <span className="kind">Purchase receipt<br /><small>PR-0001</small></span>
-            </div>
-            <div className="meta">
-              <div>Supplier<b>Apex Mills</b></div>
-              <div>Date<b>24 Oct 2026</b></div>
-              <div>Accepted warehouse<b>Main</b></div>
-              <div>Batch<b>B-2410</b></div>
-            </div>
-            <table>
-              <thead><tr><th>Item</th><th className="n">Qty</th><th className="n">Amount</th></tr></thead>
-              <tbody>
-                <tr><td>12 mm steel rod</td><td className="n">10</td><td className="n">₹50,000</td></tr>
-                <tr className="tot"><td>Received</td><td className="n">10</td><td className="n">₹50,000</td></tr>
-              </tbody>
-            </table>
-          </article>
-          <div className="post-targets">
-            <div>
-              <p>Stock ledger</p>
-              <p className="amt">+10</p>
-              <p>Main. Inward.</p>
-            </div>
-            <div>
-              <p>General ledger</p>
-              <p className="amt">₹50,000</p>
-              <p>Stock in hand.</p>
-            </div>
-          </div>
-        </div>
-        <p className="words">Sample. Freight is a landed cost voucher. A count is a stock reconciliation.</p>
-      </div>
-    </section>
-  );
-}
-
 /* ---------------- School ---------------- */
 const SCHOOLS = [
   {
@@ -276,9 +228,7 @@ export function School() {
       <div className="wrap plate" data-tilt>
         <div className="shape-head">
           <h2 id="h-school">One student record.</h2>
-          <p>
-            Admission, attendance, the grade book, and the fee invoice share one student record. A salary slip can sit in the same company.
-          </p>
+          <p>The applicant becomes the student. Fees use that record.</p>
         </div>
         <div className="shape-grid">
           <div className="tabs" role="tablist" aria-label="What a school keeps on one record">
